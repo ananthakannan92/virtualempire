@@ -1,0 +1,92 @@
+#!/sbin/runscript
+
+# backward compatibility for existing gentoo layout 
+#
+if [ -d "/var/lib/virtualempire/.virtualempire" ]; then
+	VIRTUALEMPIRED_DEFAULT_DATADIR="/var/lib/virtualempire/.virtualempire"
+else
+	VIRTUALEMPIRED_DEFAULT_DATADIR="/var/lib/virtualempired"
+fi
+
+VIRTUALEMPIRED_CONFIGFILE=${VIRTUALEMPIRED_CONFIGFILE:-/etc/virtualempire/virtualempire.conf}
+VIRTUALEMPIRED_PIDDIR=${VIRTUALEMPIRED_PIDDIR:-/var/run/virtualempired}
+VIRTUALEMPIRED_PIDFILE=${VIRTUALEMPIRED_PIDFILE:-${VIRTUALEMPIRED_PIDDIR}/virtualempired.pid}
+VIRTUALEMPIRED_DATADIR=${VIRTUALEMPIRED_DATADIR:-${VIRTUALEMPIRED_DEFAULT_DATADIR}}
+VIRTUALEMPIRED_USER=${VIRTUALEMPIRED_USER:-${VIRTUALEMPIRE_USER:-virtualempire}}
+VIRTUALEMPIRED_GROUP=${VIRTUALEMPIRED_GROUP:-virtualempire}
+VIRTUALEMPIRED_BIN=${VIRTUALEMPIRED_BIN:-/usr/bin/virtualempired}
+VIRTUALEMPIRED_NICE=${VIRTUALEMPIRED_NICE:-${NICELEVEL:-0}}
+VIRTUALEMPIRED_OPTS="${VIRTUALEMPIRED_OPTS:-${VIRTUALEMPIRE_OPTS}}"
+
+name="Virtualempire Core Daemon"
+description="Virtualempire cryptocurrency P2P network daemon"
+
+command="/usr/bin/virtualempired"
+command_args="-pid=\"${VIRTUALEMPIRED_PIDFILE}\" \
+		-conf=\"${VIRTUALEMPIRED_CONFIGFILE}\" \
+		-datadir=\"${VIRTUALEMPIRED_DATADIR}\" \
+		-daemon \
+		${VIRTUALEMPIRED_OPTS}"
+
+required_files="${VIRTUALEMPIRED_CONFIGFILE}"
+start_stop_daemon_args="-u ${VIRTUALEMPIRED_USER} \
+			-N ${VIRTUALEMPIRED_NICE} -w 2000"
+pidfile="${VIRTUALEMPIRED_PIDFILE}"
+
+# The retry schedule to use when stopping the daemon. Could be either
+# a timeout in seconds or multiple signal/timeout pairs (like
+# "SIGKILL/180 SIGTERM/300")
+retry="${VIRTUALEMPIRED_SIGTERM_TIMEOUT}"
+
+depend() {
+	need localmount net
+}
+
+# verify
+# 1) that the datadir exists and is writable (or create it)
+# 2) that a directory for the pid exists and is writable
+# 3) ownership and permissions on the config file
+start_pre() {
+	checkpath \
+	-d \
+	--mode 0750 \
+	--owner "${VIRTUALEMPIRED_USER}:${VIRTUALEMPIRED_GROUP}" \
+	"${VIRTUALEMPIRED_DATADIR}"
+
+	checkpath \
+	-d \
+	--mode 0755 \
+	--owner "${VIRTUALEMPIRED_USER}:${VIRTUALEMPIRED_GROUP}" \
+	"${VIRTUALEMPIRED_PIDDIR}"
+
+	checkpath -f \
+	-o ${VIRTUALEMPIRED_USER}:${VIRTUALEMPIRED_GROUP} \
+	-m 0660 \
+	${VIRTUALEMPIRED_CONFIGFILE}
+
+	checkconfig || return 1
+}
+
+checkconfig()
+{
+	if ! grep -qs '^rpcpassword=' "${VIRTUALEMPIRED_CONFIGFILE}" ; then
+		eerror ""
+		eerror "ERROR: You must set a secure rpcpassword to run virtualempired."
+		eerror "The setting must appear in ${VIRTUALEMPIRED_CONFIGFILE}"
+		eerror ""
+		eerror "This password is security critical to securing wallets "
+		eerror "and must not be the same as the rpcuser setting."
+		eerror "You can generate a suitable random password using the following "
+		eerror "command from the shell:"
+		eerror ""
+		eerror "bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'"
+		eerror ""
+		eerror "It is recommended that you also set alertnotify so you are "
+		eerror "notified of problems:"
+		eerror ""
+		eerror "ie: alertnotify=echo %%s | mail -s \"Virtualempire Alert\"" \
+			"admin@foo.com"
+		eerror ""
+		return 1
+	fi
+}

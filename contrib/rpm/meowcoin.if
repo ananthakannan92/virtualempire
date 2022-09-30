@@ -1,0 +1,157 @@
+
+## <summary>policy for virtualempire</summary>
+
+
+########################################
+## <summary>
+##	Transition to virtualempire.
+## </summary>
+## <param name="domain">
+## <summary>
+##	Domain allowed to transition.
+## </summary>
+## </param>
+#
+interface(`virtualempire_domtrans',`
+	gen_require(`
+		type virtualempire_t, virtualempire_exec_t;
+	')
+
+	corecmd_search_bin($1)
+	domtrans_pattern($1, virtualempire_exec_t, virtualempire_t)
+')
+
+
+########################################
+## <summary>
+##	Execute virtualempire server in the virtualempire domain.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`virtualempire_initrc_domtrans',`
+	gen_require(`
+		type virtualempire_initrc_exec_t;
+	')
+
+	init_labeled_script_domtrans($1, virtualempire_initrc_exec_t)
+')
+
+
+########################################
+## <summary>
+##	Search virtualempire lib directories.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`virtualempire_search_lib',`
+	gen_require(`
+		type virtualempire_var_lib_t;
+	')
+
+	allow $1 virtualempire_var_lib_t:dir search_dir_perms;
+	files_search_var_lib($1)
+')
+
+########################################
+## <summary>
+##	Read virtualempire lib files.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`virtualempire_read_lib_files',`
+	gen_require(`
+		type virtualempire_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	read_files_pattern($1, virtualempire_var_lib_t, virtualempire_var_lib_t)
+')
+
+########################################
+## <summary>
+##	Manage virtualempire lib files.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`virtualempire_manage_lib_files',`
+	gen_require(`
+		type virtualempire_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	manage_files_pattern($1, virtualempire_var_lib_t, virtualempire_var_lib_t)
+')
+
+########################################
+## <summary>
+##	Manage virtualempire lib directories.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`virtualempire_manage_lib_dirs',`
+	gen_require(`
+		type virtualempire_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	manage_dirs_pattern($1, virtualempire_var_lib_t, virtualempire_var_lib_t)
+')
+
+
+########################################
+## <summary>
+##	All of the rules required to administrate
+##	a virtualempire environment
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+## <param name="role">
+##	<summary>
+##	Role allowed access.
+##	</summary>
+## </param>
+## <rolecap/>
+#
+interface(`virtualempire_admin',`
+	gen_require(`
+		type virtualempire_t;
+		type virtualempire_initrc_exec_t;
+		type virtualempire_var_lib_t;
+	')
+
+	allow $1 virtualempire_t:process { ptrace signal_perms };
+	ps_process_pattern($1, virtualempire_t)
+
+	virtualempire_initrc_domtrans($1)
+	domain_system_change_exemption($1)
+	role_transition $2 virtualempire_initrc_exec_t system_r;
+	allow $2 system_r;
+
+	files_search_var_lib($1)
+	admin_pattern($1, virtualempire_var_lib_t)
+
+')
+

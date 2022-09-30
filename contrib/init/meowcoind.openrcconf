@@ -1,0 +1,33 @@
+# /etc/conf.d/virtualempired: config file for /etc/init.d/virtualempired
+
+# Config file location
+#VIRTUALEMPIRED_CONFIGFILE="/etc/virtualempire/virtualempire.conf"
+
+# What directory to write pidfile to?  (created and owned by $VIRTUALEMPIRED_USER)
+#VIRTUALEMPIRED_PIDDIR="/var/run/virtualempired"
+
+# What filename to give the pidfile
+#VIRTUALEMPIRED_PIDFILE="${VIRTUALEMPIRED_PIDDIR}/virtualempired.pid"
+
+# Where to write virtualempired data (be mindful that the blockchain is large)
+#VIRTUALEMPIRED_DATADIR="/var/lib/virtualempired"
+
+# User and group to own virtualempired process
+#VIRTUALEMPIRED_USER="virtualempire"
+#VIRTUALEMPIRED_GROUP="virtualempire"
+
+# Path to virtualempired executable
+#VIRTUALEMPIRED_BIN="/usr/bin/virtualempired"
+
+# Nice value to run virtualempired under
+#VIRTUALEMPIRED_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#VIRTUALEMPIRED_OPTS=""
+
+# The timeout in seconds OpenRC will wait for virtualempired to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+VIRTUALEMPIRED_SIGTERM_TIMEOUT=60

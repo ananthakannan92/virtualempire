@@ -1,0 +1,6 @@
+usr/local/bin/virtualempire-qt usr/bin
+share/pixmaps/virtualempire32.xpm usr/share/pixmaps
+share/pixmaps/virtualempire16.xpm usr/share/pixmaps
+share/pixmaps/virtualempire128.png usr/share/pixmaps
+debian/virtualempire-qt.desktop usr/share/applications
+debian/virtualempire-qt.protocol usr/share/kde4/services/
