@@ -3,14 +3,14 @@ Jenkinsfile
 *.tar.gz
 
 *.exe
-src/meowcoin
-src/meowcoind
-src/meowcoin-cli
-src/meowcoin-tx
-src/test/test_meowcoin
-src/test/test_meowcoin_fuzzy
-src/test/test_meowcoin_hash
-src/qt/test/test_meowcoin-qt
+src/virtualempire
+src/virtualempired
+src/virtualempire-cli
+src/virtualempire-tx
+src/test/test_virtualempire
+src/test/test_virtualempire_fuzzy
+src/test/test_virtualempire_hash
+src/qt/test/test_virtualempire-qt
 .vscode
 output.txt
 
@@ -35,8 +35,8 @@ config.log
 config.status
 configure
 libtool
-src/config/meowcoin-config.h
-src/config/meowcoin-config.h.in
+src/config/virtualempire-config.h
+src/config/virtualempire-config.h.in
 src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
@@ -83,12 +83,12 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-meowcoin-qt
-Meowcoin-Qt.app
+virtualempire-qt
+Virtualempire-Qt.app
 
 # Unit-tests
 Makefile.test
-meowcoin-qt_test
+virtualempire-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -101,7 +101,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_meowcoin.coverage/
+test_virtualempire.coverage/
 total.coverage/
 coverage_percent.txt
 
@@ -116,7 +116,7 @@ test/cache/*
 
 /doc/doxygen/
 
-libmeowcoinconsensus.pc
+libvirtualempireconsensus.pc
 contrib/devtools/split-debug.sh
 .idea
 cmake-build-debug
