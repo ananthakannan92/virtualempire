@@ -1,0 +1,23 @@
+FROM arm32v7/ubuntu:latest
+
+MAINTAINER cade <cade.call@mediciventures.com>
+
+EXPOSE $RPCPORT
+
+EXPOSE $PORT
+
+RUN useradd -ms /bin/bash virtualempire
+
+RUN mkdir /etc/virtualempire
+
+RUN mkdir /var/lib/virtualempire
+
+RUN chown virtualempire:virtualempire /etc/virtualempire /var/lib/virtualempire
+
+WORKDIR /home/virtualempire
+
+COPY --chown=virtualempire:virtualempire linux64/* ./run.sh /home/virtualempire/
+
+USER virtualempire
+
+CMD ["/home/virtualempire/run.sh"]

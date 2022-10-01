@@ -1,0 +1,81 @@
+policy_module(virtualempire, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type virtualempire_t;
+type virtualempire_exec_t;
+init_daemon_domain(virtualempire_t, virtualempire_exec_t)
+
+permissive virtualempire_t;
+
+type virtualempire_initrc_exec_t;
+init_script_file(virtualempire_initrc_exec_t)
+
+type virtualempire_conf_t;
+files_type(virtualempire_conf_t)
+
+type virtualempire_var_lib_t;
+files_type(virtualempire_var_lib_t)
+
+type virtualempire_var_run_t;
+files_type(virtualempire_var_run_t)
+
+type virtualempire_port_t;
+corenet_port(virtualempire_port_t)
+
+########################################
+#
+# virtualempire local policy
+#
+allow virtualempire_t self:process { fork };
+
+allow virtualempire_t self:fifo_file rw_fifo_file_perms;
+allow virtualempire_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(virtualempire_t, virtualempire_conf_t, virtualempire_conf_t)
+manage_files_pattern(virtualempire_t, virtualempire_conf_t, virtualempire_conf_t)
+
+manage_dirs_pattern(virtualempire_t, virtualempire_var_lib_t, virtualempire_var_lib_t)
+manage_files_pattern(virtualempire_t, virtualempire_var_lib_t, virtualempire_var_lib_t)
+files_var_lib_filetrans(virtualempire_t, virtualempire_var_lib_t, { dir file })
+
+manage_dirs_pattern(virtualempire_t, virtualempire_var_run_t, virtualempire_var_run_t)
+manage_files_pattern(virtualempire_t, virtualempire_var_run_t, virtualempire_var_run_t)
+
+sysnet_dns_name_resolve(virtualempire_t)
+corenet_all_recvfrom_unlabeled(virtualempire_t)
+
+allow virtualempire_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(virtualempire_t)
+corenet_tcp_sendrecv_generic_node(virtualempire_t)
+corenet_tcp_sendrecv_all_ports(virtualempire_t)
+corenet_tcp_bind_generic_node(virtualempire_t)
+
+gen_require(`
+    type virtualempire_port_t;
+')
+allow virtualempire_t virtualempire_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type virtualempire_port_t;
+')
+allow virtualempire_t virtualempire_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(virtualempire_t)
+
+files_read_etc_files(virtualempire_t)
+
+miscfiles_read_localization(virtualempire_t)
+
+sysnet_dns_name_resolve(virtualempire_t)
+
+allow virtualempire_t virtualempire_exec_t:file execute_no_trans;
+allow virtualempire_t self:process setsched;
+corecmd_exec_ls(virtualempire_t)
+corenet_tcp_connect_http_port(virtualempire_t)
+dev_read_urand(virtualempire_t)
+fs_getattr_xattr_fs(virtualempire_t)
+kernel_read_system_state(virtualempire_t)

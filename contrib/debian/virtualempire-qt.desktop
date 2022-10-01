@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Virtualempire Core
+Comment=Connect to the Virtualempire P2P Network
+Comment[de]=Verbinde mit dem Virtualempire peer-to-peer Netzwerk
+Comment[fr]=Virtualempire, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Virtualempire, eşten eşe kriptografik sanal para birimi
+Exec=virtualempire-qt %u
+Terminal=false
+Type=Application
+Icon=virtualempire128
+MimeType=x-scheme-handler/virtualempire;
+Categories=Office;Finance;
