@@ -1,7 +1,7 @@
 Virtualempire Core
 ==================================
 
-* Official Site - https://mewccrypto.com
+* Official Site - https://vtecrypto.com
 * Official Pool - https://pool.virtualempire.lol
 * Official Explorer - https://explorer.virtualempire.lol
 
