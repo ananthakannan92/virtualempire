@@ -259,7 +259,7 @@ def main():
 
     # Don't run tests on Windows by default
     if config["environment"]["EXEEXT"] == ".exe" and not args.force:
-        # https://github.com/JustAResearcher/Virtualempire/commit/d52802551752140cf41f0d9a225a43e84404d3e9
+        # https://github.com/ananthakannan92/Virtualempire/commit/d52802551752140cf41f0d9a225a43e84404d3e9
         # https://github.com/Bitcoin/bitcoin/pull/5677#issuecomment-136646964
         print("Tests currently disabled on Windows by default. Use --force option to enable")
         sys.exit(0)
