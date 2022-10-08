@@ -2,8 +2,8 @@ Virtualempire Core
 ==================================
 
 * Official Site - https://vtecrypto.com
-* Official Pool - https://pool.virtualempire.lol
-* Official Explorer - https://explorer.virtualempire.lol
+* Official Pool - https://pool.virtualempire.org
+* Official Explorer - https://explorer.virtualempire.org
 
 Virtualempire Specs
 -----------------
@@ -25,7 +25,7 @@ Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/JustAResearcher/Virtualempire/tags) are created
+completely stable. [Tags](https://github.com/ananthakannan92/Virtualempire/tags) are created
 regularly to indicate new official, stable release versions of Virtualempire Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
