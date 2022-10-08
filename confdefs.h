@@ -16,3 +16,8 @@
 #define HAVE_INTTYPES_H 1
 #define HAVE_STDINT_H 1
 #define HAVE_UNISTD_H 1
+#define LT_OBJDIR ".libs/"
+#define USE_ASM 1
+#define HAVE_LIBMINGWTHRD 1
+#define HAVE_LIBKERNEL32 1
+#define HAVE_LIBUSER32 1
