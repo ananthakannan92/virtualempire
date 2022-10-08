@@ -2,7 +2,7 @@ Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Virtualempire
 Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
  irc://#virtualempire@freenode.net
-Source: https://github.com/JustAResearcher/Virtualempire
+Source: https://github.com/ananthakannan92/Virtualempire
 
 Files: *
 Copyright: 2009-2017, Virtualempire Core Developers
