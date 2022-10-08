@@ -1,17 +1,17 @@
 Virtualempire Core version *0.15.0* is now available from:
 
-  <https://virtualempire.lol/bin/virtualempire-core-0.15.0/>
+  <https://virtualempire.org/bin/virtualempire-core-0.15.0/>
 
 This is a new major version release, including new features, various bugfixes
 and performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/JustAResearcher/Virtualempire/issues>
+  <https://github.com/ananthakannan92/Virtualempire/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://virtualempire.lol/en/list/announcements/join/>
+  <https://virtualempire.org/en/list/announcements/join/>
 
 How to Upgrade
 ==============
