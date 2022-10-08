@@ -20,8 +20,8 @@ Summary:	Peer to Peer Cryptographic Currency
 
 Group:		Applications/System
 License:	MIT
-URL:		https://virtualempire.lol
-Source0:	https://virtualempire.lol/bin/virtualempire-core-%{version}/virtualempire-%{version}.tar.gz
+URL:		https://virtualempire.org
+Source0:	https://virtualempire.org/bin/virtualempire-core-%{version}/virtualempire-%{version}.tar.gz
 Source1:	http://download.oracle.com/berkeley-db/db-%{bdbv}.NC.tar.gz
 
 Source10:	https://raw.githubusercontent.com/virtualempire/virtualempire/v%{version}/contrib/debian/examples/virtualempire.conf
