@@ -1,6 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
 // Copyright (c) 2017-2020 The OLDNAMENEEDKEEP__Core developers
+// Copyright (c) 2022-2022 The VIRTUALEMPIRE__Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -40,19 +41,6 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
     genesis.hashMerkleRoot = BlockMerkleRoot(genesis);
     return genesis;
 }
-
-/**
- * Build the genesis block. Note that the output of its generation
- * transaction cannot be spent since it did not originally exist in the
- * database.
- *
- * CBlock(hash=000000000019d6, ver=1, hashPrevBlock=00000000000000, hashMerkleRoot=4a5e1e, nTime=1231006505, nBits=1d00ffff, nNonce=2083236893, vtx=1)
- *   CTransaction(hash=4a5e1e, ver=1, vin.size=1, vout.size=1, nLockTime=0)
- *     CTxIn(COutPoint(000000, -1), coinbase 04ffff001d0104455468652054696d65732030332f4a616e2f32303039204368616e63656c6c6f72206f6e206272696e6b206f66207365636f6e64206261696c6f757420666f722062616e6b73)
- *     CTxOut(nValue=50.00000000, scriptPubKey=0x5F1DF16B2B704C8A578D0B)
- *   vMerkleTree: 4a5e1e
- 
-*/
 
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
@@ -102,18 +90,6 @@ bool CChainParams::BIP66() {
 bool CChainParams::CSVEnabled() const{
 	return consensus.nCSVEnabled;
 }
-
-
-/**
- * Main network
- */
-/**
- * What makes a good checkpoint block?
- * + Is surrounded by blocks with reasonable timestamps
- *   (no blocks before with a timestamp after, none after with
- *    timestamp before)
- * + Contains no strange transactions
- */
 
 class CMainParams : public CChainParams {
 public:
@@ -166,18 +142,12 @@ public:
 	
 	    consensus.BIP34LockedIn = 6048; // Locked_in at height 6048
 
-
         // The best chain should have at least this much work 5de4c8dac20913 000000100010001
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000"); // Block 12000
+        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000"); // Block 0
 
         // By default assume that the signatures in ancestors of this block are valid
-        consensus.defaultAssumeValid = uint256S("0x0000001184470ff75b151613f47de8f7e59e4333bab23e7f2e8e0928b7bc3cb2"); // Block 12000
+        consensus.defaultAssumeValid = uint256S("0x0000001184470ff75b151613f47de8f7e59e4333bab23e7f2e8e0928b7bc3cb2"); // Block 0
 
-        /**
-         * The message start string is designed to be unlikely to occur in normal data.
-         * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
-         * a large 32-bit integer with any alignment.
-         */
         pchMessageStart[0] = 0x56; // V
         pchMessageStart[1] = 0x54; // T
         pchMessageStart[2] = 0x45; // E
@@ -186,69 +156,6 @@ public:
         nPruneAfterHeight = 100000;
 		
 	    uint32_t nGenesisTime = 1665155629;
-
-/*
-arith_uint256 test;
-        bool fNegative;
-        bool fOverflow;
-        test.SetCompact(0x1e00ffff, &fNegative, &fOverflow);
-        std::cout << "Test threshold: " << test.GetHex() << "\n\n";
-
-        int genesisNonce = 9543480;
-        uint256 TempHashHolding = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
-        uint256 BestBlockHash = uint256S("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        for (int i=9543480;i<9543490;i++) {
-            genesis = CreateGenesisBlock(nGenesisTime, i, 0x1e00ffff, 4, 5000 * COIN);
-            genesis.hashPrevBlock = TempHashHolding;
-			// Depending on when the timestamp is on the genesis block. You will need to use GetX16RHash or GetX16RV2Hash. Replace GetHash() with these below
-            consensus.hashGenesisBlock = genesis.GetX16RHash();
-
-            arith_uint256 BestBlockHashArith = UintToArith256(BestBlockHash);
-            if (UintToArith256(consensus.hashGenesisBlock) < BestBlockHashArith) {
-                BestBlockHash = consensus.hashGenesisBlock;
-                std::cout << "CHOOSE: consensus.hashGenesisBlock.GetHex(): " << consensus.hashGenesisBlock.GetHex() << " Nonce: " << i << " nGenesisTime: " << nGenesisTime << "\n";
-                std::cout << "CHOOSE: BestBlockHash.GetHex(): " << BestBlockHash.GetHex() << " Nonce: " << i << " nGenesisTime: " << nGenesisTime << "\n";
-                std::cout << "CHOOSE: genesis.GetX16RHash().GetHex(): " << genesis.GetX16RHash().GetHex() << " Nonce: " << i << " nGenesisTime: " << nGenesisTime << "\n";
-                std::cout << "CHOOSE: PrevBlockHash: " << genesis.hashPrevBlock.GetHex() << "\n";
-            }
-
-            //TempHashHolding = consensus.hashGenesisBlock;
-
-            if (BestBlockHashArith < test) {
-                genesisNonce = i - 1;
-                break;
-            }
-            std::cout << "	 consensus.hashGenesisBlock.GetHex(): " << consensus.hashGenesisBlock.GetHex() << " Nonce: " << i << "\n";
-        }
-        std::cout << "\n";
-        std::cout << "\n";
-        std::cout << "\n";
-
-        std::cout << "BestBlockHash.GetHex() to 0x" << BestBlockHash.GetHex() << std::endl;
-        std::cout << "genesis.GetX16RHash().GetHex() to 0x" << genesis.GetX16RHash().GetHex() << std::endl;
-        std::cout << "Genesis Nonce to " << genesisNonce << std::endl;
-        std::cout << "Genesis Merkle " << genesis.hashMerkleRoot.GetHex() << std::endl;
-
-        std::cout << "\n";
-        std::cout << "\n";
-        int totalHits = 0;
-        double totalTime = 0.0;
-
-        for(int x = 0; x < 16; x++) {
-            totalHits += algoHashHits[x];
-            totalTime += algoHashTotal[x];
-            std::cout << "hash algo " << x << " hits " << algoHashHits[x] << " total " << algoHashTotal[x] << " avg " << algoHashTotal[x]/algoHashHits[x] << std::endl;
-        }
-
-        std::cout << "Totals: hash algo " <<  " hits " << totalHits << " total " << totalTime << " avg " << totalTime/totalHits << std::endl;
-
-        genesis.hashPrevBlock = TempHashHolding;
-
-        return;
-
-*/
-
-//0x1e00ffff 0x1f0fffff
 
 	    genesis = CreateGenesisBlock(nGenesisTime, 9543489, 0x1e00ffff, 4, 5000 * COIN);
         consensus.hashGenesisBlock = genesis.GetX16RHash();
