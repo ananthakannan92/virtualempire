@@ -1915,6 +1915,6 @@ void VirtualempireGUI::mnemonic()
 
 void VirtualempireGUI::getLatestVersion()
 {
-    versionRequest->setUrl(QUrl("https://api.github.com/repos/JustAResearcher/Virtualempire/releases"));
+    versionRequest->setUrl(QUrl("https://api.github.com/repos/ananthakannan92/Virtualempire/releases"));
     networkVersionManager->get(*versionRequest);
 }
