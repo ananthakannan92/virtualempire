@@ -29,7 +29,7 @@ cd ~/
 # Removes any existing builds and starts clean WARNING
 rm -rf ~/virtualempirecoin ~/sign ~/release
 
-git clone https://github.com/JustAResearcher/Virtualempire
+git clone https://github.com/ananthakannan92/Virtualempire
 cd ~/virtualempirecoin
 git checkout $BRANCH
 
