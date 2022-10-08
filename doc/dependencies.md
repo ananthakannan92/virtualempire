@@ -16,16 +16,16 @@ These are the dependencies currently used by Virtualempire Core. You can find in
 | GCC |  | [4.7+](https://gcc.gnu.org/) |  |  |  |
 | HarfBuzz-NG |  |  |  |  |  |
 | libevent | [2.1.8-stable](https://github.com/libevent/libevent/releases) | 2.0.22 | No |  |  |
-| libjpeg |  |  |  |  | [Yes](https://github.com/JustAResearcher/Virtualempire/blob/master/depends/packages/qt.mk#L75) |
-| libpng |  |  |  |  | [Yes](https://github.com/JustAResearcher/Virtualempire/blob/master/depends/packages/qt.mk#L74) |
+| libjpeg |  |  |  |  | [Yes](https://github.com/ananthakannan92/Virtualempire/blob/master/depends/packages/qt.mk#L75) |
+| libpng |  |  |  |  | [Yes](https://github.com/ananthakannan92/Virtualempire/blob/master/depends/packages/qt.mk#L74) |
 | MiniUPnPc | [2.0.20170509](http://miniupnp.free.fr/files) |  | No |  |  |
 | OpenSSL | [1.0.1k](https://www.openssl.org/source) |  | Yes |  |  |
-| PCRE |  |  |  |  | [Yes](https://github.com/JustAResearcher/Virtualempire/blob/master/depends/packages/qt.mk#L76) |
+| PCRE |  |  |  |  | [Yes](https://github.com/ananthakannan92/Virtualempire/blob/master/depends/packages/qt.mk#L76) |
 | protobuf | [2.6.3](https://github.com/google/protobuf/releases) |  | No |  |  |
 | Python (tests) |  | [3.4](https://www.python.org/downloads) |  |  |  |
 | qrencode | [3.4.4](https://fukuchi.org/works/qrencode) |  | No |  |  |
 | Qt | [5.7.1](https://download.qt.io/official_releases/qt/) | 4.7+ | No |  |  |
-| XCB |  |  |  |  | [Yes](https://github.com/JustAResearcher/Virtualempire/blob/master/depends/packages/qt.mk#L94) (Linux only) |
-| xkbcommon |  |  |  |  | [Yes](https://github.com/JustAResearcher/Virtualempire/blob/master/depends/packages/qt.mk#L93) (Linux only) |
+| XCB |  |  |  |  | [Yes](https://github.com/ananthakannan92/Virtualempire/blob/master/depends/packages/qt.mk#L94) (Linux only) |
+| xkbcommon |  |  |  |  | [Yes](https://github.com/ananthakannan92/Virtualempire/blob/master/depends/packages/qt.mk#L93) (Linux only) |
 | ZeroMQ | [4.1.5](https://github.com/zeromq/libzmq/releases) |  | No |  |  |
 | zlib | [1.2.11](http://zlib.net/) |  |  |  | No |
