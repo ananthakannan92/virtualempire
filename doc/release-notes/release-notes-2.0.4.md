@@ -9,11 +9,11 @@ upgrade to this version.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/JustAResearcher/Virtualempire/issues>
+  <https://github.com/ananthakannan92/Virtualempire/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://virtualempire.lol/en/list/announcements/join/>
+  <https://virtualempire.org/en/list/announcements/join/>
 
 How to Upgrade
 ==============
@@ -68,7 +68,7 @@ Notable changes
 2.0.4.0-b175d7350 Change log
 ==============
 
-Changelog available here: <https://github.com/JustAResearcher/Virtualempire/commits/release_2.0.4>
+Changelog available here: <https://github.com/ananthakannan92/Virtualempire/commits/release_2.0.4>
 
 Credits
 ==============
