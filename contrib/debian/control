@@ -26,9 +26,9 @@ Build-Depends: debhelper,
  python,
  libzmq3-dev
 Standards-Version: 3.9.2
-Homepage: https://virtualempire.lol
-Vcs-Git: git://github.com/JustAResearcher/Virtualempire.git
-Vcs-Browser: https://github.com/JustAResearcher/Virtualempire
+Homepage: https://virtualempire.org
+Vcs-Git: git://github.com/ananthakannan92/Virtualempire.git
+Vcs-Browser: https://github.com/ananthakannan92/Virtualempire
 
 Package: virtualempired
 Architecture: any
