@@ -1,4 +1,4 @@
-## Please read https://github.com/JustAResearcher/Virtualempire/blob/master/doc/build-windows.md
+## Please read https://github.com/ananthakannan92/Virtualempire/blob/master/doc/build-windows.md
 
 ## STEP1: Setup dependency
 # sudo apt-get install build-essential libtool autotools-dev automake pkg-config bsdmainutils curl nsis
