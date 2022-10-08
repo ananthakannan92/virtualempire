@@ -36,7 +36,7 @@ sudo make install
 # Build Virtualempire
 ```
 cd ~/build/
-git clone https://github.com/JustAResearcher/Virtualempire
+git clone https://github.com/ananthakannan92/Virtualempire
 cd Virtualempire/
 ./autogen.sh
 ./configure --disable-tests --with-gui=no CPPFLAGS="-I/usr/local/BerkeleyDB.4.8/include -O2" LDFLAGS="-L/usr/local/BerkeleyDB.4.8/lib"
