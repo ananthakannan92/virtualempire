@@ -22,7 +22,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/JustAResearcher/Virtualempire.git"
+- "url": "https://github.com/ananthakannan92/Virtualempire.git"
   "dir": "virtualempire"
 files: []
 script: |
