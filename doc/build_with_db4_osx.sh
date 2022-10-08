@@ -1,4 +1,4 @@
-echo 'Please read  https://github.com/JustAResearcher/Virtualempire/blob/main/doc/build-osx.md '
+echo 'Please read  https://github.com/ananthakannan92/Virtualempire/blob/main/doc/build-osx.md '
 echo 'Run this script under macOS  '
 
 VIRTUALEMPIRE_ROOT=$(pwd)
