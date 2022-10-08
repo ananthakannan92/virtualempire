@@ -3,9 +3,9 @@ Release Process
 
 Before every release candidate:
 
-* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/translation_process.md#synchronising-translations).
+* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/translation_process.md#synchronising-translations).
 
-* Update manpages, see [gen-manpages.sh](https://github.com/JustAResearcher/Virtualempire/blob/master/contrib/devtools/README.md#gen-manpagessh).
+* Update manpages, see [gen-manpages.sh](https://github.com/ananthakannan92/Virtualempire/blob/master/contrib/devtools/README.md#gen-manpagessh).
 
 Before every minor and major release:
 
@@ -21,7 +21,7 @@ Before every minor and major release:
 
 Before every major release:
 
-* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/JustAResearcher/Virtualempire/pull/7415) for an example.
+* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/ananthakannan92/Virtualempire/pull/7415) for an example.
 * Update [`BLOCK_CHAIN_SIZE`](/src/qt/intro.cpp) to the current size plus some overhead.
 * Update `src/chainparams.cpp` chainTxData with statistics about the transaction count and rate.
 * Update version of `contrib/gitian-descriptors/*.yml`: usually one'd want to do this on master after branching off the release - but be sure to at least do it before a new major release
@@ -36,7 +36,7 @@ Check out the source code in the following directory hierarchy.
     git clone https://github.com/virtualempire-core/gitian.sigs.git
     git clone https://github.com/virtualempire-core/virtualempire-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/JustAResearcher/Virtualempire.git
+    git clone https://github.com/ananthakannan92/Virtualempire.git
 
 ### Virtualempire maintainers/release engineers, suggestion for writing release notes
 
@@ -292,7 +292,7 @@ virtualempirecoin.net (see below for virtualempirecoin.net update instructions).
 
   - virtualempire-dev and virtualempire-core-dev mailing list
 
-  - Virtualempire Core announcements list https://virtualempire.lol/en/list/announcements/join/
+  - Virtualempire Core announcements list https://virtualempire.org/en/list/announcements/join/
 
   - Update title of #virtualempire on Freenode IRC
 
@@ -302,6 +302,6 @@ virtualempirecoin.net (see below for virtualempirecoin.net update instructions).
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 
-  - Create a [new GitHub release](https://github.com/JustAResearcher/Virtualempire/releases/new) with a link to the arcVIRTUALEMPIRED release notes.
+  - Create a [new GitHub release](https://github.com/ananthakannan92/Virtualempire/releases/new) with a link to the arcVIRTUALEMPIRED release notes.
 
   - Celebrate
