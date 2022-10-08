@@ -47,7 +47,7 @@ from the root of the repository.
 
 1. Clone the Virtualempire Core source code:
     ```shell
-    git clone https://github.com/JustAResearcher/Virtualempire
+    git clone https://github.com/ananthakannan92/Virtualempire
     cd Virtualempire
     ```
 
