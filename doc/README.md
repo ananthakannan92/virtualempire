@@ -5,7 +5,7 @@ Setup
 ---------------------
 Virtualempire Core is the original Virtualempire client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Virtualempire transactions; depending on the speed of your computer and network connection, the synchronization process is typically complete in under an hour.
 
-To download compiled binaries of the Virtualempire Core and wallet, visit the [GitHub release page](https://github.com/JustAResearcher/Virtualempire/releases).
+To download compiled binaries of the Virtualempire Core and wallet, visit the [GitHub release page](https://github.com/ananthakannan92/Virtualempire/releases).
 
 Running
 ---------------------
@@ -109,47 +109,47 @@ Building from source
 ---------------------
 The following are developer notes on how to build the Virtualempire core software on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
-- [Dependencies](https://github.com/JustAResearcher/Virtualempire/tree/master/doc/dependencies.md)
-- [OS X Build Notes](https://github.com/JustAResearcher/Virtualempire/tree/master/doc/build-osx.md)
-- [Unix Build Notes](https://github.com/JustAResearcher/Virtualempire/tree/master/doc/build-unix.md)
-- [Windows Build Notes](https://github.com/JustAResearcher/Virtualempire/tree/master/doc/build-windows.md)
-- [OpenBSD Build Notes](https://github.com/JustAResearcher/Virtualempire/tree/master/doc/build-openbsd.md)
-- [Gitian Building Guide](https://github.com/JustAResearcher/Virtualempire/tree/master/doc/gitian-building.md)
+- [Dependencies](https://github.com/ananthakannan92/Virtualempire/tree/master/doc/dependencies.md)
+- [OS X Build Notes](https://github.com/ananthakannan92/Virtualempire/tree/master/doc/build-osx.md)
+- [Unix Build Notes](https://github.com/ananthakannan92/Virtualempire/tree/master/doc/build-unix.md)
+- [Windows Build Notes](https://github.com/ananthakannan92/Virtualempire/tree/master/doc/build-windows.md)
+- [OpenBSD Build Notes](https://github.com/ananthakannan92/Virtualempire/tree/master/doc/build-openbsd.md)
+- [Gitian Building Guide](https://github.com/ananthakannan92/Virtualempire/tree/master/doc/gitian-building.md)
 
 Development
 ---------------------
-Virtualempire repo's [root README](https://github.com/JustAResearcher/Virtualempire/blob/master/README.md) contains relevant information on the development process and automated testing.
+Virtualempire repo's [root README](https://github.com/ananthakannan92/Virtualempire/blob/master/README.md) contains relevant information on the development process and automated testing.
 
-- [Developer Notes](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/developer-notes.md)
-- [Release Notes](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/release-notes.md)
-- [Release Process](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/release-process.md)
+- [Developer Notes](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/developer-notes.md)
+- [Release Notes](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/release-notes.md)
+- [Release Process](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/release-process.md)
 - [Source Code Documentation (External Link)](https://dev.visucore.com/virtualempire/doxygen/) -- 2018-05-11 -- Broken link
-- [Translation Process](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/translation_process.md)
-- [Translation Strings Policy](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/translation_strings_policy.md)
-- [Travis CI](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/travis-ci.md)
-- [Unauthenticated REST Interface](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/REST-interface.md)
-- [Shared Libraries](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/shared-libraries.md)
-- [BIPS](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/bips.md)
-- [Dnsseed Policy](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/dnsseed-policy.md)
-- [Benchmarking](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/benchmarking.md)
+- [Translation Process](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/translation_process.md)
+- [Translation Strings Policy](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/translation_strings_policy.md)
+- [Travis CI](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/travis-ci.md)
+- [Unauthenticated REST Interface](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/REST-interface.md)
+- [Shared Libraries](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/shared-libraries.md)
+- [BIPS](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/bips.md)
+- [Dnsseed Policy](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/dnsseed-policy.md)
+- [Benchmarking](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/benchmarking.md)
 
 ### Resources
 - Discuss on the [VirtualempireTalk](https://www.bitcointalk.org/) forums, in the [Development & Technical Discussion board](---).
 - Discuss on chat [Discord](----), [Telegram](---) or [Reddit](---).
 - Find out more on the [Virtualempire Wiki](---)
-- Visit the project home [Virtualempire.lol](https://virtualempire.lol)
+- Visit the project home [Virtualempire.lol](https://virtualempire.org)
 
 ### Miscellaneous
-- [Assets Attribution](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/assets-attribution.md)
-- [Files](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/files.md)
-- [Fuzz-testing](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/fuzzing.md)
-- [Reduce Traffic](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/reduce-traffic.md)
-- [Tor Support](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/tor.md)
-- [Init Scripts (systemd/upstart/openrc)](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/init.md)
-- [ZMQ](https://github.com/JustAResearcher/Virtualempire/blob/master/doc/zmq.md)
+- [Assets Attribution](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/assets-attribution.md)
+- [Files](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/files.md)
+- [Fuzz-testing](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/fuzzing.md)
+- [Reduce Traffic](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/reduce-traffic.md)
+- [Tor Support](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/tor.md)
+- [Init Scripts (systemd/upstart/openrc)](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/init.md)
+- [ZMQ](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/zmq.md)
 
 License
 ---------------------
-Distributed under the [MIT software license](https://github.com/JustAResearcher/Virtualempire/blob/master/COPYING).
+Distributed under the [MIT software license](https://github.com/ananthakannan92/Virtualempire/blob/master/COPYING).
 This product includes software developed by the OpenSSL Project for use in the [OpenSSL Toolkit](https://www.openssl.org/). This product includes
 cryptographic software written by Eric Young ([eay@cryptsoft.com](mailto:eay@cryptsoft.com)), and UPnP software written by Thomas Bernard.
