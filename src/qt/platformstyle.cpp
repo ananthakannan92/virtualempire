@@ -252,6 +252,16 @@ QColor PlatformStyle::DarkOrangeColor() const
     return COLOR_DARK_ORANGE;
 }
 
+QColor PlatformStyle::PinkColor() const
+{
+        return COLOR_PINK;
+}
+
+QColor PlatformStyle::PurpleColor() const
+{
+    return COLOR_PURPLE;
+}
+
 QColor PlatformStyle::SingleColor() const
 {
     if (darkModeEnabled)
