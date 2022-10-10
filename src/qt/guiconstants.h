@@ -64,7 +64,7 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 /* Virtualempire shadow color - light mode */
 #define COLOR_SHADOW_LIGHT QColor("#e1e6f3")
 /* Toolbar not selected text color */
-#define COLOR_TOOLBAR_NOT_SELECTED_TEXT QColor("#fdfdfd")
+#define COLOR_TOOLBAR_NOT_SELECTED_TEXT QColor("#ffffff")
 /* Toolbar selected text color */
 #define COLOR_TOOLBAR_SELECTED_TEXT COLOR_WHITE
 /* Send entries background color */
