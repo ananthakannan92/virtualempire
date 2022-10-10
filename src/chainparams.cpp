@@ -213,8 +213,8 @@ public:
         nIssueRestrictedAssetBurnAmount = 1500 * COIN;
         nAddNullQualifierTagBurnAmount = .1 * COIN;
 		
-        // 40% of 5000 COIN to Donation
-	    nCommunityAutonomousAmount = 1;
+        // 10% of 5000 COIN to Gamers
+	    nCommunityAutonomousAmount = 10;
 
         // Burn Addresses
 	    strIssueAssetBurnAddress = "VCissueAssetXXXXXXXXXXXXXXXXa1oUfD";
@@ -230,7 +230,7 @@ public:
         //Global Burn Address
         strGlobalBurnAddress = "VCBurnXXXXXXXXXXXXXXXXXXXXXXUkdzqy";
 
-        // Donation Address
+        // team Address
         strCommunityAutonomousAddress = "VPyNGZSSZ4rbjkVJRLn3v64pMcktpEYJnU";
 
         // DGW Activation
@@ -368,8 +368,8 @@ public:
         nIssueRestrictedAssetBurnAmount = 1500 * COIN;
         nAddNullQualifierTagBurnAmount = .1 * COIN;
 		
-	    // 15% of 5000 COIN to Donation
-	    nCommunityAutonomousAmount = 15;
+	    // 10% of 5000 COIN to Gamers
+	    nCommunityAutonomousAmount = 10;
 
         // Burn Addresses
 	    strIssueAssetBurnAddress = "vCissueAssetXXXXXXXXXXXXXXXXauYgzW";
