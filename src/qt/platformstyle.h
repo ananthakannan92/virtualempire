@@ -38,6 +38,8 @@ public:
     QColor DarkBlueColor() const;
     QColor LightOrangeColor() const;
     QColor DarkOrangeColor() const;
+    QColor PinkColor() const;
+    QColor PurpleColor() const;
     QColor AssetTxColor() const;
 
 
