@@ -51,6 +51,10 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 #define COLOR_DARK_ORANGE QColor("#f05239")
 /* Virtualempire light orange */
 #define COLOR_LIGHT_ORANGE QColor("#f79433")
+/* Virtualempire pink */
+#define COLOR_PINK QColor("#ffc0cb")
+/* Virtualempire puple */
+#define COLOR_PURPLE QColor("#cc8899")
 /* Virtualempire dark blue */
 #define COLOR_DARK_BLUE QColor("#384192")
 /* Virtualempire light blue */
