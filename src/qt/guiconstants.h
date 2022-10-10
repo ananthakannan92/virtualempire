@@ -91,7 +91,7 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 /* Toolbar not selected text color */
 #define COLOR_TOOLBAR_NOT_SELECTED_TEXT_DARK_MODE QColor("#6c80c5")
 /* Toolbar selected text color */
-#define COLOR_TOOLBAR_SELECTED_TEXT_DARK_MODE QColor("#ffffff")
+#define COLOR_TOOLBAR_SELECTED_TEXT_DARK_MODE QColor("#fdfdfd")
 /* Send entries background color dark mode */
 #define COLOR_SENDENTRIES_BACKGROUND_DARK QColor("#1c2535")
 
