@@ -161,16 +161,12 @@ public:
         consensus.hashGenesisBlock = genesis.GetX16RHash();
 
 
-std::cout << "Genesis Nonce to " << genesis.nNonce << std::endl;
-std::cout << "consensus.hashGenesisBlock.GetHex() " << consensus.hashGenesisBlock.GetHex() << std::endl;
+        std::cout << "Genesis Nonce to " << genesis.nNonce << std::endl;
+        std::cout << "consensus.hashGenesisBlock.GetHex() " << consensus.hashGenesisBlock.GetHex() << std::endl;
 		std::cout << "genesis.hashPrevBlock().GetHex() " << genesis.hashPrevBlock.GetHex() << std::endl;
-std::cout << "Genesis Merkle " << genesis.hashMerkleRoot.GetHex() << std::endl;
+        std::cout << "Genesis Merkle " << genesis.hashMerkleRoot.GetHex() << std::endl;
 	    assert(consensus.hashGenesisBlock == uint256S("0000001184470ff75b151613f47de8f7e59e4333bab23e7f2e8e0928b7bc3cb2"));
         assert(genesis.hashMerkleRoot == uint256S("258a22361a9401a4d6e4ef3275c8f3f4cda887fa2fc0467263fcaea8f385c856"));
-
-
-        //vSeeds.emplace_back("66.42.117.31", false);
-	  //  vSeeds.emplace_back("167.179.94.220", false);
 
         // Address start with M
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,70);
@@ -218,24 +214,24 @@ std::cout << "Genesis Merkle " << genesis.hashMerkleRoot.GetHex() << std::endl;
         nAddNullQualifierTagBurnAmount = .1 * COIN;
 		
         // 40% of 5000 COIN to Donation
-	    nCommunityAutonomousAmount = 40;
+	    nCommunityAutonomousAmount = 1;
 
         // Burn Addresses
-	    strIssueAssetBurnAddress = "MCissueAssetXXXXXXXXXXXXXXXXa1oUfD";
-        strReissueAssetBurnAddress = "MCReissueAssetXXXXXXXXXXXXXXUdjigq";
-        strIssueSubAssetBurnAddress = "MCissueSubAssetXXXXXXXXXXXXXbCnNFk";
-        strIssueUniqueAssetBurnAddress = "MCissueUniqueAssetXXXXXXXXXXSVUgF5";
-        strIssueMsgChannelAssetBurnAddress = "MCissueMsgChanneLAssetXXXXXXUe6Pvr";
-        strIssueQualifierAssetBurnAddress = "MCissueQuaLifierXXXXXXXXXXXXWLyvs5";
-        strIssueSubQualifierAssetBurnAddress = "MCissueSubQuaLifierXXXXXXXXXVHmaXW";
-        strIssueRestrictedAssetBurnAddress = "MCissueRestrictedXXXXXXXXXXXXfEYLU";
-        strAddNullQualifierTagBurnAddress = "MCaddTagBurnXXXXXXXXXXXXXXXXUrKr7b";
+	    strIssueAssetBurnAddress = "VCissueAssetXXXXXXXXXXXXXXXXa1oUfD";
+        strReissueAssetBurnAddress = "VCReissueAssetXXXXXXXXXXXXXXUdjigq";
+        strIssueSubAssetBurnAddress = "VCissueSubAssetXXXXXXXXXXXXXbCnNFk";
+        strIssueUniqueAssetBurnAddress = "VCissueUniqueAssetXXXXXXXXXXSVUgF5";
+        strIssueMsgChannelAssetBurnAddress = "VCissueMsgChanneLAssetXXXXXXUe6Pvr";
+        strIssueQualifierAssetBurnAddress = "VCissueQuaLifierXXXXXXXXXXXXWLyvs5";
+        strIssueSubQualifierAssetBurnAddress = "VCissueSubQuaLifierXXXXXXXXXVHmaXW";
+        strIssueRestrictedAssetBurnAddress = "VCissueRestrictedXXXXXXXXXXXXfEYLU";
+        strAddNullQualifierTagBurnAddress = "VCaddTagBurnXXXXXXXXXXXXXXXXUrKr7b";
         
         //Global Burn Address
-        strGlobalBurnAddress = "MCBurnXXXXXXXXXXXXXXXXXXXXXXUkdzqy";
+        strGlobalBurnAddress = "VCBurnXXXXXXXXXXXXXXXXXXXXXXUkdzqy";
 
         // Donation Address
-        strCommunityAutonomousAddress = "MPyNGZSSZ4rbjkVJRLn3v64pMcktpEYJnU";
+        strCommunityAutonomousAddress = "VPyNGZSSZ4rbjkVJRLn3v64pMcktpEYJnU";
 
         // DGW Activation
         nDGWActivationBlock = 1;
@@ -329,8 +325,6 @@ public:
 		
         vFixedSeeds.clear();
         vSeeds.clear();
-	   // vSeeds.emplace_back("66.42.117.31", false);
-       // vSeeds.emplace_back("167.179.94.220", false);
 		
 	    base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,132);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,124);
@@ -378,21 +372,21 @@ public:
 	    nCommunityAutonomousAmount = 15;
 
         // Burn Addresses
-	    strIssueAssetBurnAddress = "mCissueAssetXXXXXXXXXXXXXXXXauYgzW";
-        strReissueAssetBurnAddress = "mCReissueAssetXXXXXXXXXXXXXXViYbet";
-        strIssueSubAssetBurnAddress = "mCissueSubAssetXXXXXXXXXXXXXb41gMc";
-        strIssueUniqueAssetBurnAddress = "mCissueUniqueAssetXXXXXXXXXXWguvk3";
-        strIssueMsgChannelAssetBurnAddress = "mCissueMsgChanneLAssetXXXXXXWPw4W6";
-        strIssueQualifierAssetBurnAddress = "mCissueQuaLifierXXXXXXXXXXXXW2VtZy";
-        strIssueSubQualifierAssetBurnAddress = "mCissueSubQuaLifierXXXXXXXXXTj8yy8";
-        strIssueRestrictedAssetBurnAddress = "mCissueRestrictedXXXXXXXXXXXX3xpZV";
-        strAddNullQualifierTagBurnAddress = "mCaddTagBurnXXXXXXXXXXXXXXXXapsVx8";
+	    strIssueAssetBurnAddress = "vCissueAssetXXXXXXXXXXXXXXXXauYgzW";
+        strReissueAssetBurnAddress = "vCReissueAssetXXXXXXXXXXXXXXViYbet";
+        strIssueSubAssetBurnAddress = "vCissueSubAssetXXXXXXXXXXXXXb41gMc";
+        strIssueUniqueAssetBurnAddress = "vCissueUniqueAssetXXXXXXXXXXWguvk3";
+        strIssueMsgChannelAssetBurnAddress = "vCissueMsgChanneLAssetXXXXXXWPw4W6";
+        strIssueQualifierAssetBurnAddress = "vCissueQuaLifierXXXXXXXXXXXXW2VtZy";
+        strIssueSubQualifierAssetBurnAddress = "vCissueSubQuaLifierXXXXXXXXXTj8yy8";
+        strIssueRestrictedAssetBurnAddress = "vCissueRestrictedXXXXXXXXXXXX3xpZV";
+        strAddNullQualifierTagBurnAddress = "vCaddTagBurnXXXXXXXXXXXXXXXXapsVx8";
 
 	    //Global Burn Address
-        strGlobalBurnAddress = "mCBurnXXXXXXXXXXXXXXXXXXXXXXUDUcus";
+        strGlobalBurnAddress = "vCBurnXXXXXXXXXXXXXXXXXXXXXXUDUcus";
 		
 	    //CommunityAutonomousAddress
-        strCommunityAutonomousAddress = "m1aNrki9MUb7FshxGiph6rR3eCmS9wU3rw";
+        strCommunityAutonomousAddress = "v1aNrki9MUb7FshxGiph6rR3eCmS9wU3rw";
 
         // DGW Activation
         nDGWActivationBlock = 1;
