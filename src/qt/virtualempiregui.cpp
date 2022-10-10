@@ -664,7 +664,7 @@ void VirtualempireGUI::createToolBars()
 
         QLabel* label = new QLabel();
         label->setPixmap(QPixmap::fromImage(QImage(":/icons/virtualempirecointext")));
-        label->setContentsMargins(10,10,10,40);
+        label->setContentsMargins(0,0,0,20);
         label->setStyleSheet(".QLabel{background-color: transparent;}");
         /** VIRTUALEMPIRE END */
 
