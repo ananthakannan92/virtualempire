@@ -660,11 +660,11 @@ void VirtualempireGUI::createToolBars()
 
         QString widgetStyleSheet = ".QWidget {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 %1, stop: 1 %2);}";
 
-        toolbarWidget->setStyleSheet(widgetStyleSheet.arg(platformStyle->LightBlueColor().name(), platformStyle->DarkBlueColor().name()));
+        toolbarWidget->setStyleSheet(widgetStyleSheet.arg(platformStyle->PinkColor().name(), platformStyle->PurpleColor().name()));
 
         QLabel* label = new QLabel();
         label->setPixmap(QPixmap::fromImage(QImage(":/icons/virtualempirecointext")));
-        label->setContentsMargins(0,0,0,50);
+        label->setContentsMargins(10,10,10,40);
         label->setStyleSheet(".QLabel{background-color: transparent;}");
         /** VIRTUALEMPIRE END */
 
