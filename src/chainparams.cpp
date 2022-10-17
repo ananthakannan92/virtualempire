@@ -231,7 +231,7 @@ public:
         strGlobalBurnAddress = "VCBurnXXXXXXXXXXXXXXXXXXXXXXUkdzqy";
 
         // team Address
-        strCommunityAutonomousAddress = "VPyNGZSSZ4rbjkVJRLn3v64pMcktpEYJnU";
+        strCommunityAutonomousAddress = "VCfZfYBXwMV9F5wPcWXvz3FfDEJbJDgSG5";
 
         // DGW Activation
         nDGWActivationBlock = 1;
@@ -386,7 +386,7 @@ public:
         strGlobalBurnAddress = "vCBurnXXXXXXXXXXXXXXXXXXXXXXUDUcus";
 		
 	    //CommunityAutonomousAddress
-        strCommunityAutonomousAddress = "v1aNrki9MUb7FshxGiph6rR3eCmS9wU3rw";
+        strCommunityAutonomousAddress = "VCfZfYBXwMV9F5wPcWXvz3FfDEJbJDgSG5";
 
         // DGW Activation
         nDGWActivationBlock = 1;
@@ -532,7 +532,7 @@ public:
         strGlobalBurnAddress = "JGYQBki6wWWnJLp2dcgdtNZWs9a2e1nXM3";
 		
 	//CommunityAutonomousAddress
-        strCommunityAutonomousAddress = "JCPncGFawSDgP3CmG19MB6cbKP5XuhXY4u";
+        strCommunityAutonomousAddress = "VCfZfYBXwMV9F5wPcWXvz3FfDEJbJDgSG5";
 
         // DGW Activation
         nDGWActivationBlock = 200;
