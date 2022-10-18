@@ -231,7 +231,7 @@ public:
         strGlobalBurnAddress = "VCBurnXXXXXXXXXXXXXXXXXXXXXXUkdzqy";
 
         // team Address
-        strCommunityAutonomousAddress = "VCfZfYBXwMV9F5wPcWXvz3FfDEJbJDgSG5";
+        strCommunityAutonomousAddress = "VD7H64DJDZ4ccJnFAkgBeza52EbWUdDmu9";
 
         // DGW Activation
         nDGWActivationBlock = 1;
@@ -244,7 +244,7 @@ public:
         nMessagingActivationBlock = 1; // Messaging activated block height
         nRestrictedActivationBlock = 1; // Restricted activated block height
 
-        nKAAAWWWPOWActivationTime = 1665164417;
+        nKAAAWWWPOWActivationTime = 1666096612;
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
     }
 };
@@ -386,7 +386,7 @@ public:
         strGlobalBurnAddress = "vCBurnXXXXXXXXXXXXXXXXXXXXXXUDUcus";
 		
 	    //CommunityAutonomousAddress
-        strCommunityAutonomousAddress = "VCfZfYBXwMV9F5wPcWXvz3FfDEJbJDgSG5";
+        strCommunityAutonomousAddress = "VD7H64DJDZ4ccJnFAkgBeza52EbWUdDmu9";
 
         // DGW Activation
         nDGWActivationBlock = 1;
