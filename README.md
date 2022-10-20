@@ -3,7 +3,7 @@ Virtualempire Core
 
 * Official Site - https://virtualempire.in
 * Official Pool - https://pool.virtualempire.in * (soon.....)
-* Official Explorer - https://explorer.virtualempire.in
+* Official Explorer - http://explorer.virtualempire.in
 
 Virtualempire Specs
 -----------------
