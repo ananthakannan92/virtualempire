@@ -1,9 +1,9 @@
 Virtualempire Core
 ==================================
 
-* Official Site - https://virtualempire.org
-* Official Pool - https://pool.virtualempire.org
-* Official Explorer - https://explorer.virtualempire.org
+* Official Site - https://virtualempire.in
+* Official Pool - https://pool.virtualempire.in * (soon.....)
+* Official Explorer - https://explorer.virtualempire.in
 
 Virtualempire Specs
 -----------------
