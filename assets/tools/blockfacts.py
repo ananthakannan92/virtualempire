@@ -11,7 +11,7 @@ cli = "virtualempire-cli"
 
 #mode = "-testnet"
 mode = ""
-rpc_port = 8766
+rpc_port = 9766
 #Set this information in your virtualempire.conf file (in datadir, not testnet3)
 rpc_user = 'rpcuser'
 rpc_pass = 'rpcpass555'

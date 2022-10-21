@@ -628,7 +628,7 @@ std::string HelpMessage(HelpMessageMode mode)
 std::string LicenseInfo()
 {
     const std::string URL_SOURCE_CODE = "<https://github.com/ananthakannan92/Virtualempire>";
-    const std::string URL_WEBSITE = "<https://virtualempire.org>";
+    const std::string URL_WEBSITE = "<https://virtualempire.in>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2022, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +

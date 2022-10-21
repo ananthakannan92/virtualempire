@@ -24,12 +24,12 @@ import logging
 cli = "virtualempire-cli"
 
 mode = "-main"
-rpc_port = 8766
+rpc_port = 9766
 
 #mode = "-testnet"
 #rpc_port = 18770
 #mode =  "-regtest"
-#rpc_port = 18444
+#rpc_port = 19444
 
 #Set this information in your virtualempire.conf file (in datadir, not testnet6)
 rpc_user = 'rpcuser'
