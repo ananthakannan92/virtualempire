@@ -633,8 +633,34 @@ void ArgsManager::ReadConfigFile(const std::string &confPath)
     if (!streamConfig.good()){
         // Create empty virtualempire.conf if it does not exist
         FILE* configFile = fopen(GetConfigFile(confPath).string().c_str(), "a");
-        if (configFile != nullptr)
+//        if (configFile != NULL)
+//            fclose(configFile);
+
+        if (configFile != NULL) {
+            std::string strHeader = "# Virtual Empire config file\n"
+                          "rpcuser=username\n"
+                          "rpcpassword=password\n"
+                          "server=1\n"
+                          "listen=1\n"
+                          "daemon=1\n"
+                          "port=8788\n"
+                          "rpcport=9766\n"
+                          "rpcbind=127.0.0.1\n"
+                          "maxconnections=20\n"
+                          "maxconnections=20\n"
+                          "rpcallowip=127.0.0.1\n"
+                          "deprecatedrpc=accounts\n"
+                          "\n"
+                          "# ADDNODES:\n"
+                          "addnode=161.35.40.152\n"
+                          "addnode=seed01.altcoinbuilders.com\n"
+                          "addnode=seed02.altcoinbuilders.com\n"
+                          "addnode=37.24.69.42\n"
+                          "addnode=95.165.169.188\n"
+                          "\n";
+            fwrite(strHeader.c_str(), std::strlen(strHeader.c_str()), 1, configFile);
             fclose(configFile);
+        }
         return; // Nothing to read, so just return
     }
 
