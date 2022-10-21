@@ -105,7 +105,7 @@ public:
         consensus.kawpowLimit 	= uint256S("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // Estimated starting diff for first 180 kawpow blocks
         consensus.nPowTargetTimespan = 2016 * 60; // 1.4 days
         consensus.nPowTargetSpacing = 1 * 60;
-	    consensus.fPowAllowMinDifficultyBlocks = false;
+	consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1613; // Approx 80% of 2016
         consensus.nMinerConfirmationWindow = 2016; // nPowTargetTimespan / nPowTargetSpacing
@@ -169,6 +169,10 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("258a22361a9401a4d6e4ef3275c8f3f4cda887fa2fc0467263fcaea8f385c856"));
 
         vSeeds.emplace_back("161.35.40.152", false);
+        vSeeds.emplace_back("45.77.153.55", false);
+        vSeeds.emplace_back("108.61.149.178", false);
+        vSeeds.emplace_back("37.24.69.42", false);
+        vSeeds.emplace_back("95.165.169.188", false);
 
         // Address start with M
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,70);
