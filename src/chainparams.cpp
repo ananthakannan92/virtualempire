@@ -143,10 +143,10 @@ public:
 	    consensus.BIP34LockedIn = 6048; // Locked_in at height 6048
 
         // The best chain should have at least this much work 5de4c8dac20913 000000100010001
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000"); // Block 0
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000001d87bc3f6ab3a");
 
         // By default assume that the signatures in ancestors of this block are valid
-        consensus.defaultAssumeValid = uint256S("0x0000001184470ff75b151613f47de8f7e59e4333bab23e7f2e8e0928b7bc3cb2"); // Block 0
+        consensus.defaultAssumeValid = uint256S("0x0000000000b0f1da8b4839a7592937ce05662fa9dfcb8b53ad30f78a12007bc1");
 
         pchMessageStart[0] = 0x56; // V
         pchMessageStart[1] = 0x54; // T
@@ -157,15 +157,15 @@ public:
 		
 	    uint32_t nGenesisTime = 1665155629;
 
-	    genesis = CreateGenesisBlock(nGenesisTime, 9543489, 0x1e00ffff, 4, 5000 * COIN);
+	genesis = CreateGenesisBlock(nGenesisTime, 9543489, 0x1e00ffff, 4, 5000 * COIN);
         consensus.hashGenesisBlock = genesis.GetX16RHash();
 
 
         std::cout << "Genesis Nonce to " << genesis.nNonce << std::endl;
         std::cout << "consensus.hashGenesisBlock.GetHex() " << consensus.hashGenesisBlock.GetHex() << std::endl;
-		std::cout << "genesis.hashPrevBlock().GetHex() " << genesis.hashPrevBlock.GetHex() << std::endl;
+	std::cout << "genesis.hashPrevBlock().GetHex() " << genesis.hashPrevBlock.GetHex() << std::endl;
         std::cout << "Genesis Merkle " << genesis.hashMerkleRoot.GetHex() << std::endl;
-	    assert(consensus.hashGenesisBlock == uint256S("0000001184470ff75b151613f47de8f7e59e4333bab23e7f2e8e0928b7bc3cb2"));
+	assert(consensus.hashGenesisBlock == uint256S("0000001184470ff75b151613f47de8f7e59e4333bab23e7f2e8e0928b7bc3cb2"));
         assert(genesis.hashMerkleRoot == uint256S("258a22361a9401a4d6e4ef3275c8f3f4cda887fa2fc0467263fcaea8f385c856"));
 
         vSeeds.emplace_back("161.35.40.152", false);
@@ -195,16 +195,24 @@ public:
             {
             	{
             	    {0, uint256S("0x0000001184470ff75b151613f47de8f7e59e4333bab23e7f2e8e0928b7bc3cb2")},
+            	    {1, uint256S("0x002d351a71c971e54162aefe244b81ce03cf99368da8af112a38e2210d6bd135")},
+            	    {16, uint256S("0x0033021ced7ac0d12301c10f13ef8142d5a7715aa8ff69fcee63def88e4b8e66")},
+            	    {409, uint256S("0x0000cae85a47d5559147196e90b992c0289ddf387a8cd16bc1dfec886295ccd1")},
+            	    {1554, uint256S("0x000000002126cfbfcd2d85ee7012e2f186398a75587b7753a628bc4c533f9b5e")},
+            	    {2190, uint256S("0x000000000352027f7e0977691b4eb7462f2700bc30439deb177c4e0a234c5907")},
+            	    {2434, uint256S("0x0000000000acb9f2204e1342352dbcd0b8f680d726c0906bf0b3b344cfec7d5e")},
+            	    {2619, uint256S("0x00000000006ee99e6490aeaddbf9461e56354b4ac3110bf001e11aa93d27b22c")},
+            	    {2638, uint256S("0x0000000000b0f1da8b4839a7592937ce05662fa9dfcb8b53ad30f78a12007bc1")},
             	}
             }
         };
 
         chainTxData = ChainTxData{
             // Update as we know more about the contents of the Virtualempire chain from rpc: getchaintxstats 12000
-        	1665155629, // * UNIX timestamp of last known number of transactions
-            0,      // * total number of transactions between genesis and that timestamp
+        	1666368289, // * UNIX timestamp of last known number of transactions
+            2768,      // * total number of transactions between genesis and that timestamp
                         // * (the tx=... number in the SetBestChain debug.log lines)
-            0 // * estimated number of transactions per second after that timestamp
+            0.03497378229831322 // * estimated number of transactions per second after that timestamp
         };
 
 
