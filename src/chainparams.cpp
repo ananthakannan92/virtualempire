@@ -168,6 +168,8 @@ public:
 	    assert(consensus.hashGenesisBlock == uint256S("0000001184470ff75b151613f47de8f7e59e4333bab23e7f2e8e0928b7bc3cb2"));
         assert(genesis.hashMerkleRoot == uint256S("258a22361a9401a4d6e4ef3275c8f3f4cda887fa2fc0467263fcaea8f385c856"));
 
+        vSeeds.emplace_back("161.35.40.152", false);
+
         // Address start with M
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,70);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,122);
