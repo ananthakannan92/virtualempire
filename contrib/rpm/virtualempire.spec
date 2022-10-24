@@ -20,8 +20,8 @@ Summary:	Peer to Peer Cryptographic Currency
 
 Group:		Applications/System
 License:	MIT
-URL:		https://virtualempire.org
-Source0:	https://virtualempire.org/bin/virtualempire-core-%{version}/virtualempire-%{version}.tar.gz
+URL:		https://virtualempire.in
+Source0:	https://virtualempire.in/bin/virtualempire-core-%{version}/virtualempire-%{version}.tar.gz
 Source1:	http://download.oracle.com/berkeley-db/db-%{bdbv}.NC.tar.gz
 
 Source10:	https://raw.githubusercontent.com/virtualempire/virtualempire/v%{version}/contrib/debian/examples/virtualempire.conf
@@ -332,12 +332,12 @@ if [ `%{_sbindir}/sestatus |grep -c "disabled"` -eq 0 ]; then
 for selinuxvariant in %{selinux_variants}; do
 	%{_sbindir}/semodule -s ${selinuxvariant} -i %{_datadir}/selinux/${selinuxvariant}/virtualempire.pp &> /dev/null || :
 done
-%{_sbindir}/semanage port -a -t virtualempire_port_t -p tcp 8766
-%{_sbindir}/semanage port -a -t virtualempire_port_t -p tcp 8767
-%{_sbindir}/semanage port -a -t virtualempire_port_t -p tcp 18766
+%{_sbindir}/semanage port -a -t virtualempire_port_t -p tcp 9766
+%{_sbindir}/semanage port -a -t virtualempire_port_t -p tcp 8788
+%{_sbindir}/semanage port -a -t virtualempire_port_t -p tcp 19766
 %{_sbindir}/semanage port -a -t virtualempire_port_t -p tcp 18767
-%{_sbindir}/semanage port -a -t virtualempire_port_t -p tcp 18443
-%{_sbindir}/semanage port -a -t virtualempire_port_t -p tcp 18444
+%{_sbindir}/semanage port -a -t virtualempire_port_t -p tcp 19443
+%{_sbindir}/semanage port -a -t virtualempire_port_t -p tcp 19444
 %{_sbindir}/fixfiles -R virtualempire-server restore &> /dev/null || :
 %{_sbindir}/restorecon -R %{_localstatedir}/lib/virtualempire || :
 fi
@@ -353,12 +353,12 @@ fi
 # SELinux
 if [ $1 -eq 0 ]; then
 	if [ `%{_sbindir}/sestatus |grep -c "disabled"` -eq 0 ]; then
-	%{_sbindir}/semanage port -d -p tcp 8766
-	%{_sbindir}/semanage port -d -p tcp 8767
-	%{_sbindir}/semanage port -d -p tcp 18766
+	%{_sbindir}/semanage port -d -p tcp 9766
+	%{_sbindir}/semanage port -d -p tcp 8788
+	%{_sbindir}/semanage port -d -p tcp 19766
 	%{_sbindir}/semanage port -d -p tcp 18767
-	%{_sbindir}/semanage port -d -p tcp 18443
-	%{_sbindir}/semanage port -d -p tcp 18444
+	%{_sbindir}/semanage port -d -p tcp 19443
+	%{_sbindir}/semanage port -d -p tcp 19444
 	for selinuxvariant in %{selinux_variants}; do
 		%{_sbindir}/semodule -s ${selinuxvariant} -r virtualempire &> /dev/null || :
 	done

@@ -275,14 +275,14 @@ virtualempirecoin.net (see below for virtualempirecoin.net update instructions).
 
 - Update virtualempirecoin.net version
 
-  - First, check to see if the Virtualempire.org maintainers have prepared a
+  - First, check to see if the virtualempire.in maintainers have prepared a
     release: https://github.com/virtualempire-dot-org/virtualempirecoin.net/labels/Releases
 
       - If they have, it will have previously failed their Travis CI
         checks because the final release files weren't uploaded.
         Trigger a Travis CI rebuild---if it passes, merge.
 
-  - If they have not prepared a release, follow the Virtualempire.org release
+  - If they have not prepared a release, follow the virtualempire.in release
     instructions: https://github.com/virtualempire-dot-org/virtualempirecoin.net#release-notes
 
   - After the pull request is merged, the website will automatically show the newest version within 15 minutes, as well
@@ -292,7 +292,7 @@ virtualempirecoin.net (see below for virtualempirecoin.net update instructions).
 
   - virtualempire-dev and virtualempire-core-dev mailing list
 
-  - Virtualempire Core announcements list https://virtualempire.org/en/list/announcements/join/
+  - Virtualempire Core announcements list https://virtualempire.in/en/list/announcements/join/
 
   - Update title of #virtualempire on Freenode IRC
 

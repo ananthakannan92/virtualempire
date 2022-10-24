@@ -27,9 +27,9 @@ import hashlib
 cli = "virtualempire-cli"
 
 mode =  "-testnet"
-rpc_port = 18766
+rpc_port = 19766
 #mode =  "-regtest"
-#rpc_port = 18443
+#rpc_port = 19443
 csv_file = "Virtualempire Assets - Sheet1.csv"
 #Set this information in your virtualempire.conf file (in datadir, not testnet3)
 rpc_user = 'rpcuser'

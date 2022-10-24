@@ -1,11 +1,11 @@
 package=expat
-$(package)_version=2.4.1
-$(package)_download_path=https://github.com/libexpat/libexpat/releases/download/R_$(subst .,_,$($(package)_version))/
-$(package)_file_name=$(package)-$($(package)_version).tar.xz
-$(package)_sha256_hash=cf032d0dba9b928636548e32b327a2d66b1aab63c4f4a13dd132c2d1d2f2fb6a
+$(package)_version=2.2.6
+$(package)_download_path=https://github.com/libexpat/libexpat/releases/download/R_2_2_6/
+$(package)_file_name=$(package)-$($(package)_version).tar.bz2
+$(package)_sha256_hash=17b43c2716d521369f82fc2dc70f359860e90fa440bea65b3b85f0b246ea81f2
 
 define $(package)_set_vars
-$(package)_config_opts=--disable-static
+$(package)_config_opts=--disable-static --without-docbook
 endef
 
 define $(package)_config_cmds

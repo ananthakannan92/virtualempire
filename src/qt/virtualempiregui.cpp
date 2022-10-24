@@ -745,9 +745,10 @@ void VirtualempireGUI::createToolBars()
 
         QFont currentMarketFont;
         currentMarketFont.setFamily("Open Sans");
-        currentMarketFont.setWeight(QFont::Weight::Normal);
-        currentMarketFont.setLetterSpacing(QFont::SpacingType::AbsoluteSpacing, -0.6);
-        currentMarketFont.setPixelSize(18);
+        currentMarketFont.setWeight(QFont::Weight::Bold);
+        currentMarketFont.setLetterSpacing(QFont::SpacingType::AbsoluteSpacing, 0.6);
+   //     currentMarketFont.setPixelSize(18);
+        currentMarketFont.setPixelSize(8);
 
         // Set the pricing information
         QHBoxLayout* priceLayout = new QHBoxLayout(headerWidget);
@@ -755,11 +756,13 @@ void VirtualempireGUI::createToolBars()
         priceLayout->setDirection(QBoxLayout::LeftToRight);
         priceLayout->setAlignment(Qt::AlignVCenter);
         labelCurrentMarket->setContentsMargins(50,0,0,0);
-        labelCurrentMarket->setFixedHeight(75);
+  //      labelCurrentMarket->setFixedHeight(75);
+        labelCurrentMarket->setFixedHeight(110);
         labelCurrentMarket->setAlignment(Qt::AlignVCenter);
         labelCurrentMarket->setStyleSheet(STRING_LABEL_COLOR);
         labelCurrentMarket->setFont(currentMarketFont);
-        labelCurrentMarket->setText(tr("Virtualempire Market Price"));
+   //     labelCurrentMarket->setText(tr("Virtualempire Market Price"));
+        labelCurrentMarket->setText(tr("COMPILED BY TYLERANDERSON"));
 
         QString currentPriceStyleSheet = ".QLabel{color: %1;}";
         labelCurrentPrice->setContentsMargins(25,0,0,0);
@@ -769,7 +772,8 @@ void VirtualempireGUI::createToolBars()
         labelCurrentPrice->setFont(currentMarketFont);
 
         QLabel* labelBtcNeox = new QLabel();
-        labelBtcNeox->setText("BTC / VTE");
+   //     labelBtcNeox->setText("BTC / VTE");
+        labelBtcNeox->setText("");
         labelBtcNeox->setContentsMargins(15,0,0,0);
         labelBtcNeox->setFixedHeight(75);
         labelBtcNeox->setAlignment(Qt::AlignVCenter);
