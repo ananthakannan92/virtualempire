@@ -174,7 +174,7 @@ public:
         vSeeds.emplace_back("37.24.69.42", false);
         vSeeds.emplace_back("95.165.169.188", false);
 
-        // Address start with M
+        // Address start with V
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,70);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,122);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,112);
@@ -231,18 +231,18 @@ public:
 	    nCommunityAutonomousAmount = 10;
 
         // Burn Addresses
-	    strIssueAssetBurnAddress = "VCissueAssetXXXXXXXXXXXXXXXXa1oUfD";
-        strReissueAssetBurnAddress = "VCReissueAssetXXXXXXXXXXXXXXUdjigq";
-        strIssueSubAssetBurnAddress = "VCissueSubAssetXXXXXXXXXXXXXbCnNFk";
-        strIssueUniqueAssetBurnAddress = "VCissueUniqueAssetXXXXXXXXXXSVUgF5";
-        strIssueMsgChannelAssetBurnAddress = "VCissueMsgChanneLAssetXXXXXXUe6Pvr";
-        strIssueQualifierAssetBurnAddress = "VCissueQuaLifierXXXXXXXXXXXXWLyvs5";
-        strIssueSubQualifierAssetBurnAddress = "VCissueSubQuaLifierXXXXXXXXXVHmaXW";
-        strIssueRestrictedAssetBurnAddress = "VCissueRestrictedXXXXXXXXXXXXfEYLU";
-        strAddNullQualifierTagBurnAddress = "VCaddTagBurnXXXXXXXXXXXXXXXXUrKr7b";
+	strIssueAssetBurnAddress = "VAffJaF7y4uRcvzjKFA4Z4GUD1J7tVbcrt";
+        strReissueAssetBurnAddress = "VAizCYwwwjs5PkbqvF3q1VHaoXAxjdh9DS";
+        strIssueSubAssetBurnAddress = "VAkUZYUnH1rZYwdR6eDT7RTxShK6SdzpF2";
+        strIssueUniqueAssetBurnAddress = "VAm2BBqZPqXhV6rcxKxYx8C9E1FhULdesU";
+        strIssueMsgChannelAssetBurnAddress = "VAmsNxZVorARrg2MUgTbBxwNTV8yw5gUQ4";
+        strIssueQualifierAssetBurnAddress = "VAozqdZzUNaGhD2WSFXWjPvgMvnCu9CjfN";
+        strIssueSubQualifierAssetBurnAddress = "VAqXycnWFbWwJ6H7WA4yAM3fpJ9VjqaLQF";
+        strIssueRestrictedAssetBurnAddress = "VAvYtwYDqiXzEAfKSRtnr1a3QGvPsMcoMP";
+        strAddNullQualifierTagBurnAddress = "VAx3T1WxiceYFumCCjaFL7kc9ENqNWEDKo";
         
         //Global Burn Address
-        strGlobalBurnAddress = "VCBurnXXXXXXXXXXXXXXXXXXXXXXUkdzqy";
+        strGlobalBurnAddress = "VAxTTgtjVNUjfTvgr8eZpFGFsuDPzvve1J";
 
         // team Address
         strCommunityAutonomousAddress = "VD7H64DJDZ4ccJnFAkgBeza52EbWUdDmu9";
