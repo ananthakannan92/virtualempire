@@ -8,11 +8,7 @@ define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2022)
 define(_COPYRIGHT_HOLDERS,[The %s developers])
 define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Virtualempire Core]])
-<<<<<<< HEAD
 AC_INIT([Virtualempire Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/ananthakannan92/Virtualempire/issues],[virtualempire],[http://virtualempire.in])
-=======
-AC_INIT([Virtualempire Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/ananthakannan92/Virtualempire/issues],[virtualempire],[https://virtualempire.in])
->>>>>>> 2889fc4c1797b4c117f7db6b3367f96b6ad2f68a
 AC_CONFIG_SRCDIR([src/validation.cpp])
 AC_CONFIG_HEADERS([src/config/virtualempire-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
