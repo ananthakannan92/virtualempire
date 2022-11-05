@@ -10,12 +10,12 @@ The solution is to speed up adoption is to run virtualempired in compatibility m
 
 As an example, normally the rpc call for transferring VTE is   
 ```sendfrom "fromaccount" "toaddress" amount ( minconf "comment" "comment_to" )```   
-Ordinarily this call to virtualempired (port 8766) will transfer VTE
+Ordinarily this call to virtualempired (port 9766) will transfer VTE
 
 Configuring a different port for sending the TRONCO token will allow the same RPC call to transfer TRONCO instead of VTE.  The advantage is that the only change needed for compatibility with a system that can already handle BTC and VTE is to use the port configured for TRONCO, or whatever asset you'd like.
 
 ### Configuration
-Every Bitcoin-type, or Virtualempire-type coin uses a different RPC port.  For example, the standard RPC port for Bitcoin is 8332, and the standard RPC port for Virtualempire is 8766.
+Every Bitcoin-type, or Virtualempire-type coin uses a different RPC port.  For example, the standard RPC port for Bitcoin is 8332, and the standard RPC port for Virtualempire is 9766.
 
 An exchange can configure multiple Virtualempire assets by selecting a different port for each asset.  Once configured, virtualempired will emulate a virtualempired daemon with RPC calls that send the specified asset, instead of VTE.
 
