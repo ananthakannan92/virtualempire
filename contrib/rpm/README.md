@@ -15,9 +15,7 @@ It is considered good form for all sources to reference a URL where the source
 can be downloaded.
 
 Sources 0-9 should be reserved for source code tarballs. `Source0` should
-<<<<<<< HEAD
 reference the release tarball available from http://virtualempire.in and
->>>>>>> 2889fc4c1797b4c117f7db6b3367f96b6ad2f68a
 `Source1` should reference the BerkeleyDB source.
 
 Sources 10-99 are for source files that are maintained in the
