@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2011-2016 The Bitcoin Core developers
+// Copyright (c) 2011-2016 The Bitcoin Core developers
 // Copyright (c) 2017-2019 The Raven Core developers
 // Copyright (c) 2020-2021 The Virtualempire Core developers
 // Distributed under the MIT software license, see the accompanying
