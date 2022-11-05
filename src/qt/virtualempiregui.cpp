@@ -757,16 +757,12 @@ void VirtualempireGUI::createToolBars()
         priceLayout->setAlignment(Qt::AlignVCenter);
         labelCurrentMarket->setContentsMargins(50,0,0,0);
   //      labelCurrentMarket->setFixedHeight(75);
-<<<<<<< HEAD
         labelCurrentMarket->setFixedHeight(0);
->>>>>>> 2889fc4c1797b4c117f7db6b3367f96b6ad2f68a
         labelCurrentMarket->setAlignment(Qt::AlignVCenter);
         labelCurrentMarket->setStyleSheet(STRING_LABEL_COLOR);
         labelCurrentMarket->setFont(currentMarketFont);
    //     labelCurrentMarket->setText(tr("Virtualempire Market Price"));
-<<<<<<< HEAD
         labelCurrentMarket->setText(tr("Virtualempire Market Price"));
->>>>>>> 2889fc4c1797b4c117f7db6b3367f96b6ad2f68a
 
         QString currentPriceStyleSheet = ".QLabel{color: %1;}";
         labelCurrentPrice->setContentsMargins(25,0,0,0);
