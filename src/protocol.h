@@ -73,39 +73,25 @@ namespace NetMsgType {
 /**
  * The version message provides information about the transmitting node to the
  * receiving node at the beginning of a connection.
-<<<<<<< HEAD
  * @see http://virtualempire.in/en/developer-reference#version
-=======
- * @see https://virtualempire.in/en/developer-reference#version
->>>>>>> 2889fc4c1797b4c117f7db6b3367f96b6ad2f68a
  */
 extern const char *VERSION;
 /**
  * The verack message acknowledges a previously-received version message,
  * informing the connecting node that it can begin to send other messages.
-<<<<<<< HEAD
  * @see http://virtualempire.in/en/developer-reference#verack
-=======
- * @see https://virtualempire.in/en/developer-reference#verack
->>>>>>> 2889fc4c1797b4c117f7db6b3367f96b6ad2f68a
  */
 extern const char *VERACK;
 /**
  * The addr (IP address) message relays connection information for peers on the
  * network.
-<<<<<<< HEAD
  * @see http://virtualempire.in/en/developer-reference#addr
-=======
- * @see https://virtualempire.in/en/developer-reference#addr
->>>>>>> 2889fc4c1797b4c117f7db6b3367f96b6ad2f68a
  */
 extern const char *ADDR;
 /**
  * The inv message (inventory message) transmits one or more inventories of
  * objects known to the transmitting peer.
-<<<<<<< HEAD
  * @see http://virtualempire.in/en/developer-reference#inv
->>>>>>> 2889fc4c1797b4c117f7db6b3367f96b6ad2f68a
  */
 extern const char *INV;
 /**
