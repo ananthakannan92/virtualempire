@@ -137,9 +137,7 @@ Virtualempire repo's [root README](https://github.com/ananthakannan92/Virtualemp
 - Discuss on the [VirtualempireTalk](https://www.bitcointalk.org/) forums, in the [Development & Technical Discussion board](---).
 - Discuss on chat [Discord](----), [Telegram](---) or [Reddit](---).
 - Find out more on the [Virtualempire Wiki](---)
-<<<<<<< HEAD
 - Visit the project home [Virtualempire.lol](http://virtualempire.in)
->>>>>>> 2889fc4c1797b4c117f7db6b3367f96b6ad2f68a
 
 ### Miscellaneous
 - [Assets Attribution](https://github.com/ananthakannan92/Virtualempire/blob/master/doc/assets-attribution.md)
