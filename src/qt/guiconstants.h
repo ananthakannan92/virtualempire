@@ -122,7 +122,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "Virtualempire"
-#define QAPP_ORG_DOMAIN "virtualempire.org"
+#define QAPP_ORG_DOMAIN "virtualempire.in"
 #define QAPP_APP_NAME_DEFAULT "Virtualempire-Qt"
 #define QAPP_APP_NAME_TESTNET "Virtualempire-Qt-testnet"
 
