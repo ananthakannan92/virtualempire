@@ -292,9 +292,7 @@ virtualempirecoin.net (see below for virtualempirecoin.net update instructions).
 
   - virtualempire-dev and virtualempire-core-dev mailing list
 
-<<<<<<< HEAD
   - Virtualempire Core announcements list http://virtualempire.in/en/list/announcements/join/
->>>>>>> 2889fc4c1797b4c117f7db6b3367f96b6ad2f68a
 
   - Update title of #virtualempire on Freenode IRC
 
