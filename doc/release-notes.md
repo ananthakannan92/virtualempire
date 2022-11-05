@@ -3,9 +3,7 @@ release-notes at release time)
 
 Virtualempire Core version *version* is now available from:
 
-<<<<<<< HEAD
   <http://virtualempire.in/bin/virtualempire-core-*version*/>
->>>>>>> 2889fc4c1797b4c117f7db6b3367f96b6ad2f68a
 
 This is a new major version release, including new features, various bugfixes
 and performance improvements, as well as updated translations.
@@ -16,9 +14,7 @@ Please report bugs using the issue tracker at GitHub:
 
 To receive security and update notifications, please subscribe to:
 
-<<<<<<< HEAD
   <http://virtualempire.in/en/list/announcements/join/>
->>>>>>> 2889fc4c1797b4c117f7db6b3367f96b6ad2f68a
 
 How to Upgrade
 ==============
