@@ -3,8 +3,8 @@ Virtualempire Core
 
 * Official Site - http://virtualempire.in
 * Official Site - https://virtualempire.lol
-* Official Explorer - http://explorer.virtualempire.in
-* Official Explorer - http://explorer1.virtualempire.in
+* Official Explorer - https://explorer.eu.loclx.io/
+* Official Explorer - https://explorer1.eu.loclx.io/
 
 Virtualempire Specs
 -----------------
